@@ -48,9 +48,8 @@ public class Guest extends Person{
 
     public void getFinishedOrder(Optional<Order> o){
         if ( o.isPresent() ) {
-            MessageBroker.printConsole("Guest: " + this.name + " : I've received finished order! " + o.get());
-        } else {
-            MessageBroker.printConsole("Guest: " + this.name + " : My order isn't among finished!");
+            MessageBroker.printConsole("Guest: " + this.name + " : I've received finished order! " + o.get().getName());
         }
+        int x = 0;
     }
 }

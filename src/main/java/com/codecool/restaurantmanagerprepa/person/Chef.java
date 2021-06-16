@@ -32,7 +32,7 @@ public class Chef extends Person{
     protected void transferFinishedOrders ( Waiter e ) {
         Map<Guest, Order> finishedOrdersToTransfer =  Map.copyOf(this.finishedOrder);
         e.transferFinishedOrder(finishedOrdersToTransfer);
-        e.finishedOrder.clear();
+        this.finishedOrder.clear();
         MessageBroker.printConsole("Chef: " + this.name + " : I'm transferring orders to waiter : " + e.name);
     }
 

@@ -18,7 +18,8 @@ public class restaurantApplication {
             switch (userInput){
                 case "1": getOrdersForCooking(); break;
                 case "2": giveAwayFinishedOrders(); break;
-            }
+                case "3": getOrdersForCooking(); break;
+                            }
 
         } while (!userInput.equals("q"));
     }
@@ -33,8 +34,9 @@ public class restaurantApplication {
 
     private static void menu () {
         System.out.println("Menu:");
-        System.out.println("1. Get orders for cooking");
-        System.out.println("2. Give away finished orders");
+        System.out.println("1. Get orders for cooking (Guests -> Waiters)");
+        System.out.println("2. Give away finished orders (Chef -> Waiters)");
+        System.out.println("3. Give away finished orders (Waiters -> Guests)");
         System.out.println("q - quit program");
     }
 }

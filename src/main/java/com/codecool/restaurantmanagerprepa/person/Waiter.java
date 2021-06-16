@@ -31,7 +31,8 @@ public class Waiter extends Person{
     }
 
     private void serveFinishedOrder ( Guest e ) {
-        e.getFinishedOrder(giveFinishedOrder(e));
+        Optional<Order> maybeFinishedOrder = this.giveFinishedOrder(e);
+        e.getFinishedOrder(maybeFinishedOrder);
     }
 
     private boolean checkIfGuestHasFinishedOrder ( Guest e ) {
